@@ -1,0 +1,2 @@
+Deze GUI inspireert mij omdat ik zelf ook een password generator gebruik.
+En het lijkt mij dus leuk om er zelf ook een te maken, hoe ik het zelf wil.
