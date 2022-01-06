@@ -11,4 +11,3 @@ box1 = tk.Label(window, text="Hello tkinter!", bg="blue", fg="red",font=("Arial"
 box1.pack()
 
 window.mainloop()
-

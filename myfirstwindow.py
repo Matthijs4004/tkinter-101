@@ -1,4 +1,4 @@
-import tkinter, time
+import tkinter
 
 window = tkinter.Tk()
 
