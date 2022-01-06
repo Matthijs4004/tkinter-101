@@ -1,18 +1,23 @@
-import tkinter
-root = tkinter.Tk()
+import tkinter as tk
+from time import strftime
+from tkinter import font
+from typing import Text
 
+window = tk.Tk()
 
+window.title("Klok")
+window.geometry("200x50")
+window["bg"] = "white"
 
-currentTime = tkinter.StringVar(value="Welkom")
-label = tkinter.Label(root)
-label.configure(textvariable=currentTime)
-label.pack()
-
+currentTime = tk.StringVar(value=strftime("%H: %M: %S"))
+klok = tk.Label(window, bg="white", font=("Calibri Light", 20, font.BOLD))
+klok.configure(textvariable=currentTime)
+klok.pack()
 
 def updateLabel():
-    firstMessage = currentTime.get()
-    currentTime.set(firstMessage + "Gebruiker")
-
+    currentTime.set(strftime("%H: %M: %S"))
+    klok.configure(textvariable=currentTime)
+    klok.after(80, updateLabel)
 
 updateLabel()
-root.mainloop()
+window.mainloop()
